@@ -35,6 +35,16 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
+          to="/services"
+          className={({ isActive }) =>
+            `${navLinkClass} ${hoverEffect} ${isActive ? activeClass : ""}`
+          }
+        >
+          Services
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
           to="/about"
           className={({ isActive }) =>
             `${navLinkClass} ${hoverEffect} ${isActive ? activeClass : ""}`
@@ -83,14 +93,18 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">BHC</a>
+        <a className="btn btn-ghost navbar-center ml-24 lg:ml-0  text-xl">
+          Bangla Home Care
+        </a>
       </div>
 
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        <a className="text-5xl"><Mode/></a>
+        <a className="text-5xl">
+          <Mode />
+        </a>
       </div>
     </div>
   );
