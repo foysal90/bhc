@@ -16,7 +16,7 @@ const flipCardBackStyles = {
 };
 
 const Services = () => {
-  // Track which card is flipped using state
+ 
   const [flippedIndex, setFlippedIndex] = useState(null);
 
   const services = [
@@ -102,7 +102,7 @@ const Services = () => {
                   flippedIndex === idx ? "rotateY(180deg)" : "rotateY(0deg)",
               }}
             >
-              {/* Front */}
+             
               <div
                 className={`absolute w-full h-full p-5 rounded-lg shadow-lg ${service.frontBg} flex flex-col justify-between`}
                 style={{ backfaceVisibility: "hidden" }}

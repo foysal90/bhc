@@ -8,7 +8,7 @@ import img3 from "../../assets/hc3.jpg";
 import img4 from "../../assets/hc4.jpg";
 import img5 from "../../assets/hc5.jpg";
 import img6 from "../../assets/hc6.jpg";
-import "./Banner.css"; // Ensure styles are correctly defined
+import "./Banner.css"; 
 
 const Banner = () => {
   return (
