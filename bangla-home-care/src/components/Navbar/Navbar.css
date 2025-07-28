@@ -1,0 +1,29 @@
+.nav > ul {
+    display: flex;
+    gap: 10px;
+    background-color: rgba(128, 128, 128, 0.114);
+    border: 1px solid rgba(128, 128, 128, 0.303);
+    border-radius: 25px;
+    padding: 8px;
+  }
+  .nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: black; /* Or any color you prefer */
+    padding-bottom: 5px;
+  }
+  
+  .nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #ff4500;
+    transition: width 0.5s ease;
+  }
+  
+  .nav ul li a:hover::after {
+    width: 100%;
+  }
