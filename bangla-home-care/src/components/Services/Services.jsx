@@ -1,149 +1,111 @@
-import React, { useState } from "react";
-import checkIcon from "../../assets/check.png";
+// import React from "react";
+// import { Link } from "react-router-dom";
 
-const flipCardStyles = {
-  perspective: "1000px",
-};
+// const services = [
+//   {
+//     id: "personal-care",
+//     name: "Personal Care",
+//     shortDesc:
+//       "Help with daily personal activities like bathing, grooming, dressing.",
+//   },
+//   {
+//     id: "companionship",
+//     name: "Companionship",
+//     shortDesc: "Friendly companionship to keep you engaged and active.",
+//   },
+//   {
+//     id: "meal-preparation",
+//     name: "Meal Preparation",
+//     shortDesc: "Healthy meal planning and preparation tailored to your needs.",
+//   },
+//   {
+//     id: "medication-reminder",
+//     name: "Medication Reminder",
+//     shortDesc: "Help to keep track of your medication schedule.",
+//   },
+// ];
 
-const flipCardInnerStyles = {
-  transformStyle: "preserve-3d",
-  backfaceVisibility: "hidden",
-};
+// const Services = () => {
+//   return (
+//     <div className="p-6 max-w-xl mx-auto">
+//       <h1 className="text-3xl font-bold mb-6">Our Home Care Services</h1>
+//       <ul>
+//         {services.map((service) => (
+//           <li
+//             key={service.id}
+//             className="mb-4 p-4 border rounded hover:shadow-md"
+//           >
+//             <Link
+//               to={`/service/${service.id}`}
+//               className="text-xl font-semibold text-blue-600 hover:underline"
+//             >
+//               {service.name}
+//             </Link>
+//             <p className="mt-1 text-gray-700">{service.shortDesc}</p>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
 
-const flipCardBackStyles = {
-  transform: "rotateY(180deg)",
-  backfaceVisibility: "hidden",
-};
+// export default Services;
+import React from "react";
+import { Link } from "react-router-dom";
+import { FaHandsHelping, FaSmile, FaUtensils, FaPills } from "react-icons/fa";
+
+const services = [
+  {
+    id: "personal-care",
+    name: "Personal Care",
+    shortDesc:
+      "Help with daily personal activities like bathing, grooming, dressing.",
+    icon: <FaHandsHelping className="text-4xl text-blue-500 mb-4" />,
+  },
+  {
+    id: "companionship",
+    name: "Companionship",
+    shortDesc: "Friendly companionship to keep you engaged and active.",
+    icon: <FaSmile className="text-4xl text-pink-500 mb-4" />,
+  },
+  {
+    id: "meal-preparation",
+    name: "Meal Preparation",
+    shortDesc: "Healthy meal planning and preparation tailored to your needs.",
+    icon: <FaUtensils className="text-4xl text-green-500 mb-4" />,
+  },
+  {
+    id: "medication-reminder",
+    name: "Medication Reminder",
+    shortDesc: "Help to keep track of your medication schedule.",
+    icon: <FaPills className="text-4xl text-purple-500 mb-4" />,
+  },
+];
 
 const Services = () => {
- 
-  const [flippedIndex, setFlippedIndex] = useState(null);
-
-  const services = [
-    {
-      name: "Personal Care",
-
-      features: [
-        "Assistance with Daily Living",
-        "Medication Reminders",
-        "Bathing & Grooming Support",
-        "Mobility Assistance",
-      ],
-      description:
-        "Personalized care to help with daily activities and ensure your comfort and safety.",
-      frontBg: "bg-green-100 text-black",
-    },
-    {
-      name: "Companion Care",
-
-      features: [
-        "Friendly Conversation",
-        "Meal Preparation",
-        "Light Housekeeping",
-        "Errand Assistance",
-      ],
-      description:
-        "Companionship and support to promote social interaction and daily living assistance.",
-      frontBg: "bg-yellow-200 text-black",
-    },
-    {
-      name: "Respite Care",
-
-      features: [
-        "Temporary Relief for Caregivers",
-        "Flexible Scheduling",
-        "24/7 Availability",
-        "Experienced Care Professionals",
-      ],
-      description:
-        "Temporary care solutions to give family caregivers time to rest and recharge.",
-      frontBg: "bg-blue-100 text-black",
-    },
-    {
-      name: "Specialized Care",
-
-      features: [
-        "Alzheimer’s & Dementia Care",
-        "Post-Surgery Support",
-        "Chronic Condition Management",
-        "Customized Care Plans",
-      ],
-      description:
-        "Expert care tailored to individuals with special health needs and conditions.",
-      frontBg: "bg-purple-700 text-white",
-    },
-  ];
-
   return (
-    <div className="p-6">
-      <figure className="text-center mb-10">
-        <figcaption>
-          <h1 className="text-3xl font-bold mb-2">Services We Offer</h1>
-          <p className="text-gray-600">
-            Choose the service that best suits your needs
-          </p>
-        </figcaption>
-      </figure>
-
-      <section className="grid md:grid-cols-2 lg:grid-cols-4 items-center gap-5 ">
-        {services.map((service, idx) => (
-          <div
-            key={service.name}
-            className="w-[300px] h-[330px] bg-transparent"
-            style={flipCardStyles}
-            onMouseEnter={() => setFlippedIndex(idx)}
-            onMouseLeave={() => setFlippedIndex(null)}
+    <div className="max-w-7xl mx-auto px-4 py-12">
+      <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">
+        Our Home Care Services
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {services.map((service) => (
+          <Link
+            key={service.id}
+            to={`/service/${service.id}`}
+            className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition-all duration-300 border hover:border-blue-400 flex flex-col items-center text-center"
           >
-            <div
-              className={`relative w-full h-full transition-transform duration-[2000ms] ease-in-out`}
-              style={{
-                ...flipCardInnerStyles,
-                transform:
-                  flippedIndex === idx ? "rotateY(180deg)" : "rotateY(0deg)",
-              }}
-            >
-             
-              <div
-                className={`absolute w-full h-full p-5 rounded-lg shadow-lg ${service.frontBg} flex flex-col justify-between`}
-                style={{ backfaceVisibility: "hidden" }}
-              >
-                <div>
-                  <h1 className="text-3xl font-semibold mb-3">
-                    {service.name}
-                  </h1>
-                  <h5 className="text-lg font-medium mb-3">Features</h5>
-                  <ol className="list-decimal list-inside space-y-2 text-sm">
-                    {service.features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-2">
-                        <img src={checkIcon} alt="check" width={12} />
-                        {feature}
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-
-                <button className=" text-xl   px-4 py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition">
-                  Request Consultation
-                </button>
-              </div>
-
-              {/* Back */}
-              <div
-                className="absolute w-full h-full p-5 rounded-lg shadow-lg bg-gray-900 text-white flex flex-col justify-center items-center"
-                style={flipCardBackStyles}
-              >
-                <h2 className="text-2xl font-semibold mb-3">
-                  {service.name} Service
-                </h2>
-                <p className="text-center mb-4">{service.description}</p>
-                <button className="px-4 py-2 bg-orange-600 rounded hover:bg-orange-700 transition cursor-pointer">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
+            {service.icon}
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">
+              {service.name}
+            </h2>
+            <p className="text-gray-600 text-sm">{service.shortDesc}</p>
+            <span className="mt-4 text-blue-600 font-medium hover:underline">
+              Learn More →
+            </span>
+          </Link>
         ))}
-      </section>
+      </div>
     </div>
   );
 };

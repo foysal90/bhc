@@ -27,10 +27,10 @@ const Banner = () => {
           </p>
           <div className="flex gap-4 flex-wrap">
             <button className="bg-orange-500 hover:bg-orange-600 transition text-white px-5 py-2 rounded-full">
-              Join Club Now!
+            Request Consultation
             </button>
             <button className="border border-white hover:bg-white hover:text-black transition px-5 py-2 rounded-full">
-              Download App
+              Call Now
             </button>
           </div>
         </div>
