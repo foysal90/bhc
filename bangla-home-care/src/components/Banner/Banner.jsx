@@ -8,7 +8,8 @@ import img3 from "../../assets/hc3.jpg";
 import img4 from "../../assets/hc4.jpg";
 import img5 from "../../assets/hc5.jpg";
 import img6 from "../../assets/hc6.jpg";
-import "./Banner.css"; 
+import "./Banner.css";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -27,10 +28,12 @@ const Banner = () => {
           </p>
           <div className="flex gap-4 flex-wrap">
             <button className="bg-orange-500 hover:bg-orange-600 transition text-white px-5 py-2 rounded-full">
-            Request Consultation
+              Request Consultation
             </button>
             <button className="border border-white hover:bg-white hover:text-black transition px-5 py-2 rounded-full">
-              Call Now
+              <p>
+                 <Link to="tel:+4074764044">Call Now</Link>{" "}
+              </p>
             </button>
           </div>
         </div>
