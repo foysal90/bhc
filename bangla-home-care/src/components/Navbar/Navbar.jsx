@@ -64,7 +64,7 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <a >
+        <a>
           <Mode />
         </a>
       </li>
@@ -98,7 +98,7 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        <a className="btn btn-ghost navbar-center ml-12 lg:ml-0  text-xl">
+        <a className="btn btn-ghost navbar-center ml-2 lg:ml-0  text-xl">
           Bangla Home Care
         </a>
       </div>
@@ -108,7 +108,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-        <button className="relative inline-block px-6 py-3 rounded-full w-52 overflow-hidden group">
+        <button className="relative inline-block px-6 py-3 rounded-full  overflow-hidden group">
           {/* Animated glowing background layer */}
           <span className="absolute inset-0 animate-gradient-x bg-[linear-gradient(270deg,#ff00cc,#3333ff,#00ffee)] bg-[length:400%_400%] blur-sm opacity-70 transition-all duration-1000 group-hover:scale-110 animate-pulse"></span>
 

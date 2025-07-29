@@ -12,14 +12,14 @@ const Mode = () => {
 
   return (
     <div className={isDarkMode ? "dark-mode" : ""}>
-      <button className="mx-5" onClick={toggleDarkMode}>
+      <div className="mx-5" onClick={toggleDarkMode} role="button" tabIndex={0} onKeyPress={(e) => e.key === 'Enter' && toggleDarkMode()}>
         <input
           type="checkbox"
           checked={isDarkMode}
           readOnly
           className="toggle text-red-900 border-indigo-600 bg-white checked:border-orange-500 checked:bg-black"
         />
-      </button>
+      </div>
     </div>
   );
 };
