@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import Mode from "../DayLight/Mode";
+import Header from "../Header/Header";
 
 const navLinkClass =
   "relative px-3 py-2 transition duration-300 ease-in-out text-white";
@@ -108,15 +109,8 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-        <button className="relative inline-block px-6 py-3 rounded-full  overflow-hidden group">
-          {/* Animated glowing background layer */}
-          <span className="absolute inset-0 animate-gradient-x bg-[linear-gradient(270deg,#ff00cc,#3333ff,#00ffee)] bg-[length:400%_400%] blur-sm opacity-70 transition-all duration-1000 group-hover:scale-110 animate-pulse"></span>
-
-          {/* Text layer */}
-          <span className="relative z-10 text-white font-semibold">
-            <Link to="tel:+4074764044">Call Now</Link>
-          </span>
-        </button>
+       
+        <Header />
       </div>
     </div>
   );

@@ -1,12 +1,14 @@
 import React from "react";
 import Banner from "../Banner/Banner";
-import Footer from "../Footer/Footer";
+
 import Services from "../Services/Services";
-import Navbar from "../Navbar/Navbar";
+
+import Header from "../Header/Header";
 
 const Home = () => {
   return (
     <div>
+      
       <Banner />
       <Services />
     </div>

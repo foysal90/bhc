@@ -1,0 +1,80 @@
+{
+  "siteTitle": "My Website",
+  "welcome": "Welcome to the site",
+  "about": {
+    "title": "About Us",
+    "description": "This is an English description."
+  },
+  "servicesTitle": "Our Home Care Services",
+  "services": {
+    "personalCare": {
+      "name": "Personal Care",
+      "desc": "Help with daily personal activities like bathing, grooming, dressing."
+    },
+    "companionship": {
+      "name": "Companionship",
+      "desc": "Friendly companionship to keep you engaged and active."
+    },
+    "mealPrep": {
+      "name": "Meal Preparation",
+      "desc": "Healthy meal planning and preparation tailored to your needs."
+    },
+    "medication": {
+      "name": "Medication Reminder",
+      "desc": "Help to keep track of your medication schedule."
+    },
+    "learnMore": "Learn More →"
+  },
+
+  "serviceDetails": {
+    "personal-care": {
+      "name": "Personal Care",
+      "description": "Our Personal Care service assists you with daily activities including bathing, dressing, grooming, and mobility assistance to maintain your independence."
+    },
+    "companionship": {
+      "name": "Companionship",
+      "description": "Enjoy friendly conversation, recreational activities, and emotional support through our Companionship service."
+    },
+    "meal-preparation": {
+      "name": "Meal Preparation",
+      "description": "We provide nutritious meal planning and cooking services customized to your dietary requirements and preferences."
+    },
+    "medication-reminder": {
+      "name": "Medication Reminder",
+      "description": "Our caregivers ensure timely reminders to take medications, helping you stay on track with your health needs."
+    },
+    "notFound": "Service Not Found",
+    "backToServices": "← Back to Services",
+    "requestConsultation": "Request Consultation"
+  },
+
+  "about": {
+    "title": "About Bangla Home Care",
+    "intro": "At Bangla Home Care, we are committed to",
+    "typewriter": [
+      "Improving lives by providing Compassionate care",
+      "Delivering personalized in-home support",
+      "Empowering families with reliable assistance",
+      "High-quality in-home care services",
+      "Your family is our family"
+    ],
+    "missionTitle": "Our Mission",
+    "missionText": "To deliver personalized and compassionate care, ensuring dignity and quality of life for every individual.",
+    "peopleFirstTitle": "People First",
+    "peopleFirstText": "We focus on building relationships rooted in trust, empathy, and mutual respect.",
+    "compassionTitle": "Compassionate Support",
+    "compassionText": "Our trained caregivers are dedicated to offering safe, reliable, and heartfelt assistance every day.",
+    "whyTrustTitle": "Why Families Trust Us",
+    "whyTrustText": "We believe everyone deserves to age with dignity, remain independent, and feel cared for. Whether it’s companionship, daily assistance, or specialized care, Aisha Home Care stands by your side with warmth and professionalism.",
+    "requestConsultation": "Request a Free Consultation"
+  },
+
+  "banner": {
+    "heading1": "Get body in",
+    "heading2": "shape",
+    "heading3": "stay healthy",
+    "description": "To keep yourself healthy & fit, at least exercise 40 mins to an hour every day.",
+    "requestConsultation": "Request Consultation",
+    "callNow": "Call Now"
+  }
+}
