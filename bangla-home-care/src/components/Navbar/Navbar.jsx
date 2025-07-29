@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Mode from "../DayLight/Mode";
 
 const navLinkClass =
@@ -63,6 +63,11 @@ const Navbar = () => {
           Contact Us
         </NavLink>
       </li>
+      <li>
+        <a >
+          <Mode />
+        </a>
+      </li>
     </>
   );
 
@@ -93,7 +98,7 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        <a className="btn btn-ghost navbar-center ml-24 lg:ml-0  text-xl">
+        <a className="btn btn-ghost navbar-center ml-12 lg:ml-0  text-xl">
           Bangla Home Care
         </a>
       </div>
@@ -101,10 +106,17 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
+
       <div className="navbar-end">
-        <a className="text-5xl">
-          <Mode />
-        </a>
+        <button className="relative inline-block px-6 py-3 rounded-full w-52 overflow-hidden group">
+          {/* Animated glowing background layer */}
+          <span className="absolute inset-0 animate-gradient-x bg-[linear-gradient(270deg,#ff00cc,#3333ff,#00ffee)] bg-[length:400%_400%] blur-sm opacity-70 transition-all duration-1000 group-hover:scale-110 animate-pulse"></span>
+
+          {/* Text layer */}
+          <span className="relative z-10 text-white font-semibold">
+            <Link to="tel:+4074764044">Call Now</Link>
+          </span>
+        </button>
       </div>
     </div>
   );

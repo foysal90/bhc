@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaHeart, FaUserFriends, FaHandsHelping } from "react-icons/fa";
 import ConsultationModal from "../ConsultationModal/ConsultationModal";
-
+import { Typewriter } from "react-simple-typewriter";
 const About = () => {
   const [showModal, setShowModal] = useState(false);
 
@@ -9,14 +9,33 @@ const About = () => {
     <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-20">
       {/* Hero Section */}
       <div className="max-w-5xl mx-auto text-center">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">
-          About Aisha Home Care
+        <h1 className="text-4xl font-bold text-blue-200 mb-4">
+          About Bangla Home Care
         </h1>
-        <p className="text-gray-600 text-lg">
-          At Aisha Home Care, we are committed to improving lives by providing
+        <p className="text-3xl text-black mb-4 leading-relaxed">
+          At Bangla Home Care, we are committed to{" "}
+          <Typewriter
+            words={[
+              "Improving lives by providing Compassionate care",
+              "Delivering personalized in-home support",
+              "Empowering families with reliable assistance",
+              "High-quality in-home care services",
+              "Your family is our family",
+            ]}
+            loop={5}
+            cursor
+            cursorStyle="_"
+            typeSpeed={100}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </p>
+
+        {/* <p className="text-gray-600 text-lg">
+          At Bangla Home Care, we are committed to improving lives by providing
           compassionate, high-quality in-home care services. Your family is our
           family.
-        </p>
+        </p> */}
       </div>
 
       {/* Mission & Values */}
