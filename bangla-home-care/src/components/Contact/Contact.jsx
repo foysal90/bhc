@@ -1,33 +1,51 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white px-4 py-16 flex flex-col items-center">
       <div className="max-w-4xl w-full">
-        <h2 className="text-4xl font-bold text-center mb-6">Contact Us</h2>
+        <h2 className="text-4xl font-bold text-center mb-6">
+          {t("navbar.contactUs")}
+        </h2>
         <p className="text-center text-gray-300 mb-10">
-          Have questions or need help? We’re here to assist you.
+          {t(
+            "contact.subtitle",
+            "Have questions or need help? We’re here to assist you."
+          )}
         </p>
 
         <div className="grid md:grid-cols-2 gap-10">
           {/* Contact Info */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl font-semibold mb-2">Address</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                {t("contact.addressLabel", "Address")}
+              </h3>
               <p className="text-gray-400">
-                123 Home Care Lane, Orlando, FL 32801
+                {t("contact.address", "123 Home Care Lane, Orlando, FL 32801")}
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">Phone</h3>
-              <p className="text-gray-400">+1 (407) 555-1234</p>
+              <h3 className="text-xl font-semibold mb-2">
+                {t("contact.phoneLabel", "Phone")}
+              </h3>
+              <p className="text-gray-400">
+                {t("contact.phone", "+1 (407) 555-1234")}
+              </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">Email</h3>
-              <p className="text-gray-400">info@homecare.com</p>
+              <h3 className="text-xl font-semibold mb-2">
+                {t("contact.emailLabel", "Email")}
+              </h3>
+              <p className="text-gray-400">
+                {t("contact.email", "info@homecare.com")}
+              </p>
             </div>
 
-            {/* Map embedded here */}
+            {/* Map */}
             <div className="mt-8 rounded-lg overflow-hidden shadow-lg">
               <iframe
                 title="Warren Michigan Map"
@@ -52,7 +70,9 @@ const ContactUs = () => {
             <input type="hidden" name="_next" value={window.location.href} />
 
             <div>
-              <label className="block mb-1 font-medium">Full Name</label>
+              <label className="block mb-1 font-medium">
+                {t("contact.fullName", "Full Name")}
+              </label>
               <input
                 type="text"
                 name="name"
@@ -62,7 +82,9 @@ const ContactUs = () => {
             </div>
 
             <div>
-              <label className="block mb-1 font-medium">Email</label>
+              <label className="block mb-1 font-medium">
+                {t("contact.emailField", "Email")}
+              </label>
               <input
                 type="email"
                 name="email"
@@ -72,7 +94,9 @@ const ContactUs = () => {
             </div>
 
             <div>
-              <label className="block mb-1 font-medium">Message</label>
+              <label className="block mb-1 font-medium">
+                {t("contact.message", "Message")}
+              </label>
               <textarea
                 name="message"
                 rows="4"
@@ -85,7 +109,7 @@ const ContactUs = () => {
               type="submit"
               className="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition"
             >
-              Send Message
+              {t("contact.sendMessage", "Send Message")}
             </button>
           </form>
         </div>

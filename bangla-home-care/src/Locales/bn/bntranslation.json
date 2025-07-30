@@ -111,5 +111,18 @@
     "about": "আমাদের সম্পর্কে",
     "contactUs": "যোগাযোগ করুন",
     "brand": "বাংলা হোম কেয়ার"
+  },
+  "contact": {
+    "subtitle": "প্রশ্ন আছে বা সাহায্য দরকার? আমরা সহায়তার জন্য এখানে আছি।",
+    "addressLabel": "ঠিকানা",
+    "address": "১২৩ হোম কেয়ার লেন, অরল্যান্ডো, FL ৩২৮০১",
+    "phoneLabel": "ফোন",
+    "phone": "+১ (৪০৭) ৫৫৫-১২৩৪",
+    "emailLabel": "ইমেইল",
+    "email": "info@homecare.com",
+    "fullName": "পূর্ণ নাম",
+    "emailField": "ইমেইল",
+    "message": "বার্তা",
+    "sendMessage": "বার্তা পাঠান"
   }
 }
