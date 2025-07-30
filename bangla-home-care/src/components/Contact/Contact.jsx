@@ -1,5 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
 
 const ContactUs = () => {
   const { t } = useTranslation();
@@ -19,7 +25,13 @@ const ContactUs = () => {
 
         <div className="grid md:grid-cols-2 gap-10">
           {/* Contact Info */}
-          <div className="space-y-6">
+          <motion.div
+            className="space-y-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeUp}
+          >
             <div>
               <h3 className="text-xl font-semibold mb-2">
                 {t("contact.addressLabel", "Address")}
@@ -58,13 +70,18 @@ const ContactUs = () => {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <form
+          <motion.form
             action="https://formsubmit.co/your@email.com"
             method="POST"
             className=" bg-white/20 backdrop-blur-md text-black rounded-lg shadow-lg p-6 space-y-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeUp}
+            transition={{ delay: 0.3 }}
           >
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value={window.location.href} />
@@ -111,7 +128,7 @@ const ContactUs = () => {
             >
               {t("contact.sendMessage", "Send Message")}
             </button>
-          </form>
+          </motion.form>
         </div>
       </div>
     </div>

@@ -102,9 +102,12 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        <a className="btn btn-ghost navbar-center ml-2 lg:ml-0  text-xl">
+        <Link
+          to="/"
+          className="btn btn-ghost navbar-center ml-2 lg:ml-0  text-xl"
+        >
           {t("navbar.brand")}
-        </a>
+        </Link>
       </div>
 
       <div className="navbar-center hidden lg:flex">

@@ -27,7 +27,7 @@ const Banner = () => {
             <span className="text-orange-400 shape">
               {t("banner.heading2")}
             </span>{" "}
-            & {t("banner.heading3")}
+            {t("banner.heading3")}
           </h1>
           <p className="text-lg leading-relaxed">{t("banner.description")}</p>
           <div className="flex gap-4 flex-wrap">
@@ -40,10 +40,10 @@ const Banner = () => {
             {/* <button className="bg-orange-500 hover:bg-orange-600 transition text-white px-5 py-2 rounded-full">
               {t("banner.requestConsultation")}
             </button> */}
-            <button className="relative inline-block px-6 py-3 rounded-full overflow-hidden group transition-all duration-300 transform hover:scale-105 animate-pulse hover:shadow-xl">
+            <button className="relative inline-block w-66 lg:w-1/2 px-6 py-3 rounded-full overflow-hidden group transition-all duration-300 transform hover:scale-105 animate-pulse hover:shadow-xl">
               <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 group-hover:from-pink-600 group-hover:to-yellow-500 transition-all duration-500 ease-in-out blur-sm opacity-70"></span>
-              <span className="relative text-white font-semibold z-10">
-                <Link to="tel:+4074764044">{t("banner.callNow")}</Link>
+              <span className="relative text-white font-semibold z-10 ">
+                <Link to="tel:+14074764044">{t("banner.callNow")}</Link>
               </span>
             </button>
           </div>

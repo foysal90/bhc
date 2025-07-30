@@ -1,20 +1,34 @@
 import { Link } from "react-router-dom";
 import about from "../../assets/caregiver.jpg";
+import { motion } from "framer-motion";
+
 const Aboutus = () => {
   return (
     <section className="bg-black py-16 px-5">
       <div className="container mx-auto max-w-screen-xl">
         <div className="flex flex-col md:flex-row items-center gap-10">
-          {/* Left Section: Image */}
-          <div className="md:w-1/2">
+          {/* Left Section: Image with animation */}
+          <motion.div
+            className="md:w-1/2"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2 }}
+          >
             <img src={about} alt="About Us" className="rounded-lg shadow-lg" />
-          </div>
+          </motion.div>
 
-          {/* Right Section: Text */}
-          <div className="md:w-1/2">
+          {/* Right Section: Text with animation */}
+          <motion.div
+            className="md:w-1/2"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.4 }}
+          >
             <h2 className="text-3xl font-bold text-blue-800 mb-5">About Us</h2>
             <p className="text-white leading-relaxed mb-6">
-              At {}
+              At{" "}
               <span className="text-blue-500 font-semibold">
                 Bangla Home Care
               </span>
@@ -23,7 +37,7 @@ const Aboutus = () => {
               innovative, and inspiring solutions tailored to everyone’s unique
               journey.
             </p>
-            <p className="text-white  leading-relaxed mb-6">
+            <p className="text-white leading-relaxed mb-6">
               Our team of professional trainers, nutritionists, and wellness
               experts work together to create personalized plans, ensuring our
               members stay motivated and achieve sustainable results. Whether
@@ -36,7 +50,7 @@ const Aboutus = () => {
             >
               Learn More
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
