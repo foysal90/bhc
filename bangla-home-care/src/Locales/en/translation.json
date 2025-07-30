@@ -76,5 +76,30 @@
     "description": "To keep yourself healthy & fit, at least exercise 40 mins to an hour every day.",
     "requestConsultation": "Request Consultation",
     "callNow": "Call Now"
+  },
+
+  "translation": {
+    "officeHours": "Office Hours",
+    "monday": "Monday: 9:00 AM - 5:00 PM",
+    "tuesday": "Tuesday: 9:00 AM - 5:00 PM",
+    "wednesday": "Wednesday: 9:00 AM - 5:00 PM",
+    "thursday": "Thursday: 9:00 AM - 5:00 PM",
+    "friday": "Friday: 9:00 AM - 5:00 PM",
+    "saturday": "Saturday: Closed",
+    "sunday": "Sunday: Closed",
+
+    "services": "Services",
+    "personalCare": "Personal Care",
+    "companionship": "Companion Care",
+    "mealPrep": "Meal Preparation",
+    "medication": "Medication Reminder",
+
+    "company": "Company",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "jobs": "Jobs",
+    "pressKit": "Press Kit",
+
+    "social": "Social"
   }
 }
