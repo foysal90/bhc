@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // <-- import this
 import Mode from "../DayLight/Mode";
 import Header from "../Header/Header";
 
@@ -19,9 +20,11 @@ const hoverEffect = `
   hover:before:w-full
 `;
 
-const activeClass = "bg-[#003f5c] rounded-md"; // Active background color
+const activeClass = "bg-[#003f5c] rounded-md";
 
 const Navbar = () => {
+  const { t } = useTranslation();
+
   const navItems = (
     <>
       <li>
@@ -31,7 +34,7 @@ const Navbar = () => {
             `${navLinkClass} ${hoverEffect} ${isActive ? activeClass : ""}`
           }
         >
-          Home
+          {t("navbar.home")}
         </NavLink>
       </li>
       <li>
@@ -41,7 +44,7 @@ const Navbar = () => {
             `${navLinkClass} ${hoverEffect} ${isActive ? activeClass : ""}`
           }
         >
-          Services
+          {t("navbar.services")}
         </NavLink>
       </li>
       <li>
@@ -51,7 +54,7 @@ const Navbar = () => {
             `${navLinkClass} ${hoverEffect} ${isActive ? activeClass : ""}`
           }
         >
-          About
+          {t("navbar.about")}
         </NavLink>
       </li>
       <li>
@@ -61,7 +64,7 @@ const Navbar = () => {
             `${navLinkClass} ${hoverEffect} ${isActive ? activeClass : ""}`
           }
         >
-          Contact Us
+          {t("navbar.contactUs")}
         </NavLink>
       </li>
       <li>
@@ -100,7 +103,7 @@ const Navbar = () => {
           </ul>
         </div>
         <a className="btn btn-ghost navbar-center ml-2 lg:ml-0  text-xl">
-          Bangla Home Care
+          {t("navbar.brand")}
         </a>
       </div>
 
@@ -109,7 +112,6 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-       
         <Header />
       </div>
     </div>

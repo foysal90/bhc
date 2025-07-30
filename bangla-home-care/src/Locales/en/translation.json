@@ -101,5 +101,13 @@
     "pressKit": "Press Kit",
 
     "social": "Social"
+  },
+
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contactUs": "Contact Us",
+    "brand": "Bangla Home Care"
   }
 }

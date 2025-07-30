@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import { useTranslation } from "react-i18next";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -11,8 +11,10 @@ import img5 from "../../assets/hc5.jpg";
 import img6 from "../../assets/hc6.jpg";
 import "./Banner.css";
 import { Link } from "react-router-dom";
+import ConsultationModal from "../ConsultationModal/ConsultationModal";
 
 const Banner = () => {
+  const [showModal, setShowModal] = useState(false);
   const { t } = useTranslation();
 
   return (
@@ -29,9 +31,15 @@ const Banner = () => {
           </h1>
           <p className="text-lg leading-relaxed">{t("banner.description")}</p>
           <div className="flex gap-4 flex-wrap">
-            <button className="bg-orange-500 hover:bg-orange-600 transition text-white px-5 py-2 rounded-full">
-              {t("banner.requestConsultation")}
+            <button
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-full transition duration-300 shadow"
+              onClick={() => setShowModal(true)}
+            >
+              {t("about.requestConsultation")}
             </button>
+            {/* <button className="bg-orange-500 hover:bg-orange-600 transition text-white px-5 py-2 rounded-full">
+              {t("banner.requestConsultation")}
+            </button> */}
             <button className="relative inline-block px-6 py-3 rounded-full overflow-hidden group transition-all duration-300 transform hover:scale-105 animate-pulse hover:shadow-xl">
               <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 group-hover:from-pink-600 group-hover:to-yellow-500 transition-all duration-500 ease-in-out blur-sm opacity-70"></span>
               <span className="relative text-white font-semibold z-10">
@@ -39,6 +47,10 @@ const Banner = () => {
               </span>
             </button>
           </div>
+          <ConsultationModal
+            isOpen={showModal}
+            onClose={() => setShowModal(false)}
+          />
         </div>
 
         {/* Right side carousel */}
