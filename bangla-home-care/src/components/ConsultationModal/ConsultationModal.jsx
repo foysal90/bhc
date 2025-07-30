@@ -1,5 +1,5 @@
 import React from "react";
-
+import img from "../../assets/doctor.gif"; // Ensure this path is correct
 const ConsultationModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
@@ -8,8 +8,16 @@ const ConsultationModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full relative">
+    <div
+      className="fixed inset-0 z-50 flex justify-center items-center bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${img})`,
+        backdropFilter: "blur(5px)",
+        backgroundColor: "rgba(0, 0, 0, 0.6)",
+        backgroundBlendMode: "overlay",
+      }}
+    >
+      <div className="bg-white/40 backdrop-blur-md p-8 rounded-lg shadow-lg max-w-md w-full relative">
         <button
           onClick={onClose}
           className="absolute top-2 right-3 text-gray-500 hover:text-red-600 text-2xl"

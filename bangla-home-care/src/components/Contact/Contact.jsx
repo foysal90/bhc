@@ -64,7 +64,7 @@ const ContactUs = () => {
           <form
             action="https://formsubmit.co/your@email.com"
             method="POST"
-            className="bg-white text-black rounded-lg shadow-lg p-6 space-y-4"
+            className=" bg-white/20 backdrop-blur-md text-black rounded-lg shadow-lg p-6 space-y-4"
           >
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value={window.location.href} />
@@ -77,7 +77,7 @@ const ContactUs = () => {
                 type="text"
                 name="name"
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md outline-blue-500"
+                className="w-full px-4 text-lg  py-2 border font-extrabold text-blue-500 border-gray-300 rounded-md outline-blue-500"
               />
             </div>
 
@@ -89,7 +89,7 @@ const ContactUs = () => {
                 type="email"
                 name="email"
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md outline-blue-500"
+                className="w-full px-4 text-lg  py-2 border font-extrabold text-blue-500 border-gray-300 rounded-md outline-blue-500"
               />
             </div>
 
@@ -101,7 +101,7 @@ const ContactUs = () => {
                 name="message"
                 rows="4"
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md outline-blue-500"
+                className="w-full px-4 text-lg  py-2 border font-extrabold text-blue-500 border-gray-300 rounded-md outline-blue-500"
               ></textarea>
             </div>
 
