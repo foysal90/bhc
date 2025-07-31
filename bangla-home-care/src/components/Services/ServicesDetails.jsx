@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import ConsultationModal from "../ConsultationModal/ConsultationModal";
+// Make sure the path is correct
 
 const ServiceDetails = () => {
   const { serviceId } = useParams();
   const { t } = useTranslation();
+  const [showModal, setShowModal] = useState(false);
 
   const name = t(`serviceDetails.${serviceId}.name`, { defaultValue: "" });
   const description = t(`serviceDetails.${serviceId}.description`, {
@@ -33,7 +36,7 @@ const ServiceDetails = () => {
         <p className="text-gray-600 text-lg mb-6">{description}</p>
         <button
           className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full transition duration-300 shadow"
-          onClick={() => alert(t("serviceDetails.requestConsultation"))}
+          onClick={() => setShowModal(true)}
         >
           {t("serviceDetails.requestConsultation")}
         </button>
@@ -46,6 +49,14 @@ const ServiceDetails = () => {
           </Link>
         </div>
       </div>
+
+      {/* Modal rendering */}
+      {showModal && (
+        <ConsultationModal
+          isOpen={showModal}
+          onClose={() => setShowModal(false)}
+        />
+      )}
     </div>
   );
 };
