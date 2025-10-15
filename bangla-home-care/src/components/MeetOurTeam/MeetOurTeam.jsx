@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 // ✅ Use default imports for images
 import amin from "../../assets/8f69a2bf-644b-4467-8b80-0f342ebae0c8.JPG";
-import foy from "../../assets/foy.PNG";
+import foy from "../../assets/image0.jpeg";
 import ash from "../../assets/IMG_8863.JPG";
 
 const teamMembers = [
@@ -15,13 +15,18 @@ const teamMembers = [
   },
   {
     name: "Foysal Ahmed",
-    title: "Care Coordinator",
+    title: "Compliance Specialist",
+    cell: " 407-417-8151",
+    email: "foysal@banglahomecare.net",
+    
     image: foy,
     bio: "Foysal Ahmed ensures every client receives the care and coordination they deserve.",
   },
   {
     name: "Sheikh Rahman",
-    title: "Care Coordinator",
+    title: "Director of Marketing & Outreach",
+    cell: " 786-901-0602",
+    email: "amin@banglahomecare.net",
     image: amin,
     bio: "Sheikh Rahman works closely with families and staff to deliver personalized support every day.",
   },
@@ -69,6 +74,8 @@ const MeetOurTeam = () => {
               {member.name}
             </h3>
             <p className="text-sm text-blue-500 mb-2">{member.title}</p>
+            <p className="text-sm text-blue-500 mb-2">{member.cell}</p>
+            <p className="text-sm text-blue-500 mb-2">{member.email}</p>
             <p className="text-gray-700 text-sm">{member.bio}</p>
           </motion.div>
         ))}

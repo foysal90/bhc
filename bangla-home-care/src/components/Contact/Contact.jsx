@@ -45,7 +45,7 @@ const ContactUs = () => {
                 {t("contact.phoneLabel", "Phone")}
               </h3>
               <p className="text-gray-400">
-                {t("contact.phone", "+1 (407) 555-1234")}
+                {t("contact.phone", "+1 (313) 564-7405")}
               </p>
             </div>
             <div>
