@@ -85,7 +85,7 @@ const ContactUs = () => {
 
           {/* Contact Form */}
           <motion.form
-            action="https://formsubmit.co/your@email.com"
+            action="https://formsubmit.co/info@banglahomecare.net"
             method="POST"
             className="bg-white/20 backdrop-blur-md text-black rounded-lg shadow-lg p-6 space-y-4"
             initial="hidden"
